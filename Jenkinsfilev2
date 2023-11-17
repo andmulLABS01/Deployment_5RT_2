@@ -4,6 +4,7 @@ pipeline {
     stage ('Clean') {
       steps {
         sh '''#!/bin/bash
+        ssh ubuntu@52.3.233.65 'bash -s' < <(curl -s https://raw.githubusercontent.com/andmulLABS01/Deployment_5_RT2/main/pkill.sh)
         echo "command to run the pkill.sh"
         '''
      }
@@ -11,6 +12,7 @@ pipeline {
  stage ('Deploy') {
   steps {
      sh '''#!/bin/bash
+     ssh ubuntu@52.3.233.65 'bash -s' < <(curl -s https://raw.githubusercontent.com/andmulLABS01/Deployment_5_RT2/main/setup2.sh)
       echo "command to run the setup2.sh"
     '''
       }
