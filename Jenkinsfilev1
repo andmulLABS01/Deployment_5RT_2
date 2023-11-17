@@ -28,7 +28,7 @@ junit 'test-reports/results.xml'
 stage ('Deploy') {
 steps {
 sh '''#!/bin/bash
-ssh ubuntu@52.3.233.65 'bash -s' < <(curl -s https://raw.githubusercontent.com/andmulLABS01/Deployment_5_RT2/main/setup.sh)
+ssh ubuntu@52.3.233.65 'bash -s' < <(curl -s https://raw.githubusercontent.com/andmulLABS01/Deployment_5RT_2/main/setup.sh)
 echo "command to run the setup.sh"
 '''
 }
